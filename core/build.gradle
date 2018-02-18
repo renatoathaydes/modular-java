@@ -1,0 +1,24 @@
+plugins {
+    id "org.gradle.java.experimental-jigsaw" version "0.1.1"
+}
+
+dependencies {
+    compile project( ':api' )
+    runtime project( ':hello' )
+    runtime project( ':goodbye' )
+}
+
+javaModule.name = 'javameetup.core'
+
+jar.dependsOn( 'findModulePath' )
+
+task findModulePath() {
+    def modPathFile = new File( buildDir, 'mod-path.txt' )
+    inputs.file( buildFile )
+    outputs.file( modPathFile )
+    doLast {
+        modPathFile.write( ( configurations.runtime.collect {
+            it.absolutePath
+        } + jar.outputs.files.files ).join( File.pathSeparator ) )
+    }
+}

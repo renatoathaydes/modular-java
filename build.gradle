@@ -1,0 +1,13 @@
+group = 'javameetup.modular-java'
+version = '1.0-SNAPSHOT'
+
+subprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.9
+
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+}
