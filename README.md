@@ -25,3 +25,24 @@ java -p $(cat core/build/mod-path.txt) -m meetup.core/meetup.core.Main
 
 To add/remove modules from the module path, edit the text file or comment out unnecessary dependencies in the
 core module's `build.gradle` file and re-build.
+
+### microservices
+
+This branch adds a remote service in the `hello` module via the `meetup.hello.internal.HelloRemoteMessageProvider`
+class and a `meetup.core.RemoteMain` main class to
+the `core` module that calls the remote `MessageProvider`.
+
+Remote service support (server and client) is provided by the
+`[protobuf-tcp-rsa-provider](https://github.com/renatoathaydes/protobuf-tcp-rsa-provider)` library.
+
+To start the `hello` module remote server:
+
+```
+java -p $(cat core/build/mod-path.txt) -m meetup.hello/meetup.hello.internal.HelloRemoteMessageProvider
+```
+
+Then, run the `RemoteMain` class:
+
+```
+java -p $(cat core/build/mod-path.txt) -m meetup.core/meetup.core.RemoteMain
+```
