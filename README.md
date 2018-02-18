@@ -2,6 +2,8 @@
 
 Demo for the Stockholm Java Meetup - Feb 2018.
 
+[Slide presentation](https://docs.google.com/presentation/d/1W3a65yRyM5iMCzIQZNagfunl9TUNL7dT1Edzff6Zucc/edit?usp=sharing).
+
 ## Branches
 
 ### master
