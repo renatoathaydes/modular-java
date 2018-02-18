@@ -3,5 +3,6 @@
  */
 module meetup.core {
     requires meetup.api;
+    requires protobuf.tcp.rpc;
     uses meetup.api.MessageProvider;
 }
