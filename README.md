@@ -25,7 +25,7 @@ To run the application:
 java -p $(cat core/build/mod-path.txt) -m meetup.core/meetup.core.Main
 ```
 
-To add/remove modules from the module path, edit the text file or comment out unnecessary dependencies in the
+To add/remove modules from the module path, edit the `mod-path.txt` file or comment out unnecessary dependencies in the
 core module's `build.gradle` file and re-build.
 
 ### microservices
@@ -35,7 +35,7 @@ class and a `meetup.core.RemoteMain` main class to
 the `core` module that calls the remote `MessageProvider`.
 
 Remote service support (server and client) is provided by the
-`[protobuf-tcp-rsa-provider](https://github.com/renatoathaydes/protobuf-tcp-rsa-provider)` library.
+[`protobuf-tcp-rsa-provider`](https://github.com/renatoathaydes/protobuf-tcp-rsa-provider) library.
 
 To start the `hello` module remote server:
 
