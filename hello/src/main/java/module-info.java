@@ -3,6 +3,6 @@ import meetup.hello.HelloMessageProvider;
 
 module meetup.hello {
     requires meetup.api;
-    requires protobuf.tcp.rpc;
+    requires com.athaydes.protobuf_tcp_rpc;
     provides MessageProvider with HelloMessageProvider;
 }
