@@ -6,4 +6,5 @@ javaModule.name = 'meetup.hello'
 
 dependencies {
     compile project(':api')
+    compile 'com.athaydes.protobuf:protobuf-tcp-rpc:0.2.1'
 }

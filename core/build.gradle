@@ -4,6 +4,7 @@ plugins {
 
 dependencies {
     compile project( ':api' )
+    compile 'com.athaydes.protobuf:protobuf-tcp-rpc:0.2.1'
     runtime project( ':hello' )
     runtime project( ':goodbye' )
 }
